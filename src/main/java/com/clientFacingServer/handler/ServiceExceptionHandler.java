@@ -11,8 +11,6 @@ import com.clientFacingServer.response.FacingServerResponse;
 
 @ControllerAdvice("com.clientFacingServer.controllers")
 public class ServiceExceptionHandler extends ResponseEntityExceptionHandler {
-	private static final String VQL_VALIDATE_FAILED = "VQL validation failed, reason: %s";
-
 
 	@ExceptionHandler(Exception.class)
 	public final ResponseEntity<FacingServerResponse> handleAllExceptions(Exception ex, WebRequest request) {
